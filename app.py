@@ -1,4 +1,6 @@
-from flask import Flask, Response, request
+from doctest import debug_script
+from email.policy import strict
+from flask import Flask, Response, request, abort
 from flask import json, jsonify
 from flask_restx import Api, Resource, fields
 
@@ -34,11 +36,17 @@ class movies(Resource):
         if (t := params.get("title", "")) and (y := params.get("year", "")):
             try:
                 new_id  = f'{t}-{y}'
+                if new_id in movie_info.keys():
+                    abort(status=409, description='Already Exists.')
+
                 movie_info[new_id] = params
+                for p in params:
+                    if p not in movie_data.keys():
+                        raise KeyError
             except:
-                return Response(status=409)
+                abort(status=400, description='Bad parameters')
         else:
-            return Response(status=400)
+            abort(status=400, description='Missing Title or Year.')
         return Response(status=200)
 
 
@@ -46,19 +54,28 @@ class movies(Resource):
 class movie_detail(Resource):
     def get(self, id):
         if id not in movie_info:
-            return Response(status=404)
+            abort(status=404, description=f"Movie '{id}' doesn't exists.")
         return movie_info.get(id)
-
-    def put(self):
+    
+    @api.expect(movie_info)
+    def put(self, id):
         if id not in movie_info:
-            return Response(status=404)
+            abort(status=404, description=f"Movie '{id}' doesn't exists.")
+        if not (params := request.get_json()):
+            abort(status=400, description='No parameters')
+        
+        for p in params:
+            if p not in movie_data.keys():
+                abort(status=400, description='Bad parameters')
+        for p in params:
+            movie_info[id][p] = params[p]
         return Response(status=200)
 
     def delete(self, id):
         try:
             del movie_info[id]
         except KeyError:
-            return Response(status=404)
+            abort(status=404, description=f"Movie '{id}' doesn't exists.")
         return Response(status=200)
 
 
