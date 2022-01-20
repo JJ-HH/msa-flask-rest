@@ -1,16 +1,88 @@
 {
     "movies_list": [
         {
-            "title": "sample title",
-            "year": 2010,
-            "cast": ["actor A", "actress A"],
-            "description": "this is some movie example json"
+            "title": "Evil Dead",
+            "year": 2013,
+            "cast": ["John Doe", "Jane Doe"],
+            "poster": "http://localhost:8080/images/1.jpg",
+            "description": "Evil Dead is some film"
         },
         {
-            "title": "another title",
+            "title": "Annabelle Creation",
             "year": 2017,
-            "cast": ["actor B", "actress A"],
-            "description": "this is another movie example json"
+            "cast": ["John Doe", "Jane Doe"],
+            "poster": "http://localhost:8080/images/2.jpg",
+            "description": "Annabelle Creation is some film"
+        },
+        {
+            "title": "Insidious The Last Key",
+            "year": 2018,
+            "cast": ["John Doe", "Jane Doe"],
+            "poster": "http://localhost:8080/images/3.jpg",
+            "description": "Insidious The Last Key is some film"
+        },
+        {
+            "title": "The Conjuring 2",
+            "year": 2016,
+            "cast": ["John Doe", "Jane Doe"],
+            "poster": "http://localhost:8080/images/4.jpg",
+            "description": "The Conjuring 2 is some film"
+        },
+        {
+            "title": "Dawn of Justice",
+            "year": 2016,
+            "cast": ["John Doe", "Jane Doe"],
+            "poster": "http://localhost:8080/images/5.jpg",
+            "description": "Dawn of Justice is some film"
+        },
+        {
+            "title": "Suicide Squad",
+            "year": 2016,
+            "cast": ["John Doe", "Jane Doe"],
+            "poster": "http://localhost:8080/images/6.jpg",
+            "description": "Suicide Squad is some film"
+        },
+        {
+            "title": "John Wick Chapter 1",
+            "year": 2014,
+            "cast": ["John Doe", "Jane Doe"],
+            "poster": "http://localhost:8080/images/7.jpg",
+            "description": "John Wick Chapter 1 is some film"
+        },
+        {
+            "title": "John Wick Chapter 2",
+            "year": 2017,
+            "cast": ["John Doe", "Jane Doe"],
+            "poster": "http://localhost:8080/images/8.jpg",
+            "description": "John Wick Chapter 2 is some film"
+        },
+        {
+            "title": "John Wick Chapter 3",
+            "year": 2019,
+            "cast": ["John Doe", "Jane Doe"],
+            "poster": "http://localhost:8080/images/9.jpg",
+            "description": "John Wick Chapter 1 is some film"
+        },
+        {
+            "title": "Lost In Space S2",
+            "year": 2019,
+            "cast": ["John Doe", "Jane Doe"],
+            "poster": "http://localhost:8080/images/10.jpg",
+            "description": "Lost In Space S2 is some TV series"
+        },
+        {
+            "title": "Pacific Rim",
+            "year": 2013,
+            "cast": ["John Doe", "Jane Doe"],
+            "poster": "http://localhost:8080/images/11.jpg",
+            "description": "Pacific Rim is some film"
+        },
+        {
+            "title": "Pacific Rim Uprising",
+            "year": 2018,
+            "cast": ["John Doe", "Jane Doe"],
+            "poster": "http://localhost:8080/images/12.jpg",
+            "description": "Pacific Rim Uprising is some film"
         }
     ]
 }
