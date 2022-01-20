@@ -1,0 +1,16 @@
+{
+    "movies_list": [
+        {
+            "title": "sample title",
+            "year": 2010,
+            "cast": ["actor A", "actress A"],
+            "description": "this is some movie example json"
+        },
+        {
+            "title": "another title",
+            "year": 2017,
+            "cast": ["actor B", "actress A"],
+            "description": "this is another movie example json"
+        }
+    ]
+}
